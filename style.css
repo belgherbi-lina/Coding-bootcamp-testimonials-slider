@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+:root{
+ --DarkBlue: hsl(240, 38%, 20%);
+ --GrayishBlue: hsl(240, 18%, 77%);
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url(./images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 400px;
+}
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 768px;
+}
+.bg{
+    width:450px;
+    height:450px;
+}
+.tanya{
+    position:absolute;
+    top: 50px;
+    left: 30px;
+    width: 350px;
+    height: 350px;
+}
+.quotes{
+    width: 80px;
+    height: 80px;
+}
+.feedback{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 800px;
+}
+.feedback image{
+    height: 60px;
+    position: absolute;
+    top: -70px;
+    left: 50px;
+}
+.feedback p{ /* here */
+    font-size: 20px;
+    color: var(--DarkBlue);
+    font-weight: 60;
+    display: flex;
+    flex-wrap: reverse;
+    
+    
+}
+
+.name{
+    color: var(--DarkBlue);
+    padding-top: 15px;
+}
+.rol{
+    color: var(--GrayishBlue);
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.slide-container{
+    position: relative;
+}
+.navigation{
+    display: inline-block;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0, 0, 0.2);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20%;
+}
+.navigation img{
+    cursor: pointer;
+    padding: 8px 10px 5px 10px;
+    
+}
