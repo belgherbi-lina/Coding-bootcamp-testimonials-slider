@@ -1,93 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Epilogue:wght@500;700&family=Inter:wght@300;500;700&family=Karla:wght@400;700&family=Poppins:ital,wght@0,700;1,400;1,800;1,900&family=Roboto:wght@400;700&display=swap');
+:root{
+    /* Colors */
+    --DarkBlue: hsl(240, 38%, 20%);
+    --GrayishBlue: hsl(240, 18%, 77%);
+    /* Fonts */
+    --font-family : 'Inter', sans-serif ;
+    --font-wheight-light : 300 ;
+    --font-wheight-medium : 500 ;
+    --font-wheight-bold : 700 ;
+    --font-size: 32px ;
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-:root{
- --DarkBlue: hsl(240, 38%, 20%);
- --GrayishBlue: hsl(240, 18%, 77%);
-}
-
 body{
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: url(./images/pattern-curve.svg);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    background-size: 400px;
-}
-.container{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    width: 768px;
-}
-.bg{
-    width:450px;
-    height:450px;
-}
-.tanya{
-    position:absolute;
-    top: 50px;
-    left: 30px;
-    width: 350px;
-    height: 350px;
-}
-.quotes{
-    width: 80px;
-    height: 80px;
-}
-.feedback{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    max-width: 800px;
-}
-.feedback image{
-    height: 60px;
-    position: absolute;
-    top: -70px;
-    left: 50px;
-}
-.feedback p{ /* here */
-    font-size: 20px;
+    font-family: var(--font-family);
+    font-weight: var(--font-wheight-medium);
     color: var(--DarkBlue);
-    font-weight: 60;
-    display: flex;
-    flex-wrap: reverse;
-    
-    
+    & > main{
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: url(./images/pattern-curve.svg) no-repeat bottom left;
+        background-size: 40%;
+        & > .slider{
+            display: block;
+            height: 100%;
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            & > .slide-container{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: row ;
+                align-items: center;
+                text-align: center;
+                & > .feedback{
+                    margin: 0 auto;
+                    width: 400px;
+                    background: url(images/pattern-quotes.svg) no-repeat top left;
+                    background-size: 75px;
+                    line-height: 28px;
+                    text-align: start;
+                    & > p {
+                        font-size: 20px;
+                        font-weight: var(--font-wheight-light);
+                    }
+                    & > .name {
+                        font-size: 18px;
+                        margin-top: 20px;
+                        font-weight: var(--font-wheight-bold);
+                        line-height: 25px;
+                        & > span {
+                            display: inline;
+                            font-weight: var(--font-wheight-medium);
+                            color: var(--GrayishBlue);
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .image{
+                    width: fit-content;
+                    height: 100%;
+                    margin: 0 auto;
+                    padding: 40px;
+                    background: url(images/pattern-bg.svg) no-repeat center;
+                    background-size: contain;
+                    margin-left: -153px;
+                    z-index: -1;
+                    & > img{
+                        height: 100%;
+                        width: 320px;
+                        border-radius: 4px;
+                        box-shadow: 5px 5px 15px 0 var(--GrayishBlue);
+                    }
+                }
+            }
+            .buttons{
+                position: absolute;
+                top: 340px;
+                left: 53%;
+                width: 85px;
+                height: 40px;
+                background-color: white;
+                border-radius: 50px;
+                box-shadow: -20px 10px 20px 20px hsl(242, 14%, 77%, 0.52);
+                & .prev{
+                    background: url(images/icon-prev.svg) no-repeat center center;
+                    background-size: 10px;
+                    position: absolute;
+                    height: 100%;
+                    width: 50%;
+                    border-radius: 50px 0 0 50px;
+                    cursor: pointer;
+                }
+                & .next{
+                    background: url(images/icon-next.svg) no-repeat center center;
+                    background-size: 11px;
+                    position: absolute;
+                    height: 100%;
+                    width: 50%;
+                    left: 50%;
+                    border-radius: 0 50px 50px 0;
+                    cursor: pointer;
+                }
+                & .prev:hover, .next:hover{
+                    background-color: hsl(242, 14%, 77%, 0.52);
+                }
+            }
+        }
+    }
 }
 
-.name{
-    color: var(--DarkBlue);
-    padding-top: 15px;
-}
-.rol{
-    color: var(--GrayishBlue);
-    padding-left: 5px;
-    font-size: 14px;
-}
-
-.slide-container{
-    position: relative;
-}
-.navigation{
-    display: inline-block;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0, 0, 0.2);
-    border-radius: 20px;
-    position: absolute;
-    bottom: 20px;
-    left: 20%;
-}
-.navigation img{
-    cursor: pointer;
-    padding: 8px 10px 5px 10px;
-    
+/* Mobile size */ 
+@media (max-width : 600px) {
+    body {
+        & > main {
+            & > .slider {
+                & > .slide-container{
+                    flex-direction: column-reverse;
+                    & > .feedback{
+                        width: 320px;
+                        margin: 0 auto;
+                        background-position: top center;
+                        background-size: 65px;
+                        & > p{
+                            text-align: center;
+                            font-size: 18px;
+                        }
+                        & >.name{
+                            text-align: center;
+                            & > span {
+                                display: block;
+                            }
+                        }
+                    }
+                    & > .image{
+                        margin:0 auto;
+                    }
+                }
+            }
+            & > .buttons{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
 }
