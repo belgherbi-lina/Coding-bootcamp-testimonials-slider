@@ -146,10 +146,10 @@ body{
                         margin:0 auto;
                     }
                 }
-            }
-            & > .buttons{
-                left: 50%;
-                transform: translateX(-50%);
+                & > .buttons {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
         }
     }
